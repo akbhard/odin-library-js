@@ -17,9 +17,17 @@ function Book(author, title, numberOfPages, read) {
 
 // Now I need a function to take a newly created book and add it to my library.
 
+function createDiv() {
+    const container = document.querySelector("#display")
+
+    const bookCard = document.createElement("div")
+    bookCard.classList.add("bookCard")
+    bookCard.textContent = 'Test'
+
+    container.appendChild(bookCard)
+}
+
 function addBookToLibrary () {
-
-
     let author = document.getElementById("author").value
     let title = document.getElementById("booktitle").value
     let numberOfPages = document.getElementById("numberofpages").value
@@ -30,6 +38,7 @@ function addBookToLibrary () {
     myLibrary.push(newBook)
     console.log(myLibrary)
     document.forms['book_submission'].reset()
+    myLibrary.map(createDiv)
 }
 
 
@@ -39,3 +48,7 @@ btn.onclick = addBookToLibrary
 // I now need a function that will take all the books in my library and display them in the HTML file.
 // Will most likely need to create a loop that takes the length of the array, iterate through each one.
 // For each index, it will create a page/display in the HTML. So will need to create a div in a table?
+
+
+
+
