@@ -3,6 +3,7 @@
 
 const myLibrary = []
 
+
 // Now I need a way to create a book. The method of creating a book will be using constructors.
 // The book constructor will have to take in: author, title, number of pages, whether it’s been read.
 
@@ -16,10 +17,24 @@ function Book(author, title, numberOfPages, read) {
 
 // Now I need a function to take a newly created book and add it to my library.
 
-function addBookToLibrary (author, title, numberOfPages,read) {
+function addBookToLibrary () {
+
+
+    let author = document.getElementById("author").value
+    let title = document.getElementById("booktitle").value
+    let numberOfPages = document.getElementById("numberofpages").value
+    let read = document.getElementById("read").checked
+
     const newBook = new Book (author, title, numberOfPages, read)
+
     myLibrary.push(newBook)
+    console.log(myLibrary)
+    document.forms['book_submission'].reset()
 }
+
+
+const btn = document.getElementById("button")
+btn.onclick = addBookToLibrary
 
 // I now need a function that will take all the books in my library and display them in the HTML file.
 // Will most likely need to create a loop that takes the length of the array, iterate through each one.

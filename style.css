@@ -2,7 +2,7 @@
     outline: 1px solid red;
 } */
 
-#bookform, #title, #button {
+#bookform, #title, #button{
     display: flex;
     justify-content: center;
 }
@@ -29,6 +29,7 @@ input {
 button {     
     display: inline-block;
     justify-content: center;
+    margin-top: 25px;
     outline: none;
     cursor: pointer;
     padding: 0 16px;
@@ -46,6 +47,18 @@ button {
         }                
 }
 
+container {
+    display: grid;
+    margin-top: 25px;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 500px 500px;
+    column-gap: 10px;
+    row-gap: 10px;
+}
 
+container > div {
+    display: flex;
+    justify-content: center;
+}
                     
                 
