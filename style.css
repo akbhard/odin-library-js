@@ -60,5 +60,12 @@ container > div {
     display: flex;
     justify-content: center;
 }
-                    
-                
+
+.bookCard {
+    font-size: 30px;
+    white-space: pre-wrap;
+    outline: solid 1px black;
+    margin-bottom: 1px;
+    align-items: center;
+    text-align: center;
+}

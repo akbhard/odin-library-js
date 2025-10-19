@@ -17,16 +17,6 @@ function Book(author, title, numberOfPages, read) {
 
 // Now I need a function to take a newly created book and add it to my library.
 
-function createDiv() {
-    const container = document.querySelector("#display")
-
-    const bookCard = document.createElement("div")
-    bookCard.classList.add("bookCard")
-    bookCard.textContent = 'Test'
-
-    container.appendChild(bookCard)
-}
-
 function addBookToLibrary () {
     let author = document.getElementById("author").value
     let title = document.getElementById("booktitle").value
@@ -35,10 +25,21 @@ function addBookToLibrary () {
 
     const newBook = new Book (author, title, numberOfPages, read)
 
+    function createDiv() {
+    const container = document.querySelector("#display")
+
+    const bookCard = document.createElement("div")
+    bookCard.classList.add("bookCard")
+    bookCard.textContent = 
+        `Title: ${title}\nAuthor: ${author}\nNumber of Pages: ${numberOfPages}\nRead: ${read}`
+
+    container.appendChild(bookCard)
+}
+
     myLibrary.push(newBook)
     console.log(myLibrary)
+    createDiv()
     document.forms['book_submission'].reset()
-    myLibrary.map(createDiv)
 }
 
 
