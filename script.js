@@ -32,8 +32,14 @@ function addBookToLibrary () {
     bookCard.classList.add("bookCard")
     bookCard.textContent = 
         `Title: ${title}\nAuthor: ${author}\nNumber of Pages: ${numberOfPages}\nRead: ${read}`
+    
+    const deleteButton = document.createElement("button")
+    deleteButton.classList.add("deleteButton")
+    deleteButton.textContent = 'Delete book'
+
 
     container.appendChild(bookCard)
+    bookCard.appendChild(deleteButton)
 }
 
     myLibrary.push(newBook)
