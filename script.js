@@ -36,6 +36,11 @@ function addBookToLibrary () {
     const deleteButton = document.createElement("button")
     deleteButton.classList.add("deleteButton")
     deleteButton.textContent = 'Delete book'
+    deleteButton.addEventListener("click", function (index) {
+        myLibrary.splice(index,1)
+        bookCard.remove()
+        console.log(myLibrary)
+})
 
 
     container.appendChild(bookCard)
