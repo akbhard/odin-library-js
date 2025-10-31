@@ -39,7 +39,6 @@ function addBookToLibrary () {
     deleteButton.addEventListener("click", function (index) {
         myLibrary.splice(index,1)
         bookCard.remove()
-        console.log(myLibrary)
 })
 
 
