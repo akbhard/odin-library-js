@@ -6,9 +6,9 @@ class Book {
         this.read = read;
     }
 
-    // get bookDescription(){
-    //     return `Title: ${title}\nAuthor: ${author}\nNumber of Pages: ${numberOfPages}\nRead: ${read}`
-    // }
+    get bookDescription(){
+        return `Title: ${this.title}\nAuthor: ${this.author}\nNumber of Pages: ${this.numberOfPages}\nRead: ${this.read}`
+    }
 
     createBookCard(){
         const bookCard = document.createElement("div")
@@ -28,9 +28,10 @@ function addBookToLibrary(){
         document.getElementById("read").checked
     )
 
-    container.appendChild(newBook.createBookCard())
+    // container.appendChild(newBook.createBookCard())
 
     myLibrary.push(newBook)
+    console.log(newBook.bookDescription)
     document.forms['book_submission'].reset()
     console.log(myLibrary)
 
